@@ -12,8 +12,6 @@ open class Observable {
 
     fun notifyObservers(propName: String, oldValue: Any?, newValue: Any?) {
         for (obs in observers) {
-            println(" notifyObservers function executed!")
-            println(" propName: $propName oldValue: $oldValue newValue: $newValue")
             obs.onChange(propName, oldValue, newValue)
         }
     }
@@ -37,16 +35,8 @@ Property Final version $propName changed from $oldValue to $newValue!
 """.trimIndent()
         )
     }
-    println(p.age)
-     p.age= 29
-    println(p.age)
-
-// Property age changed from 28 to 29!
- //   p.salary = 1500
-
-//    println("${p.name} is ${p.salary}")
-//    println("${p.name} is ${p.age}")
-// Property salary changed from 1000 to 1500!
+    p.age = 48
+    p.salary = 1500
 
 
 }
